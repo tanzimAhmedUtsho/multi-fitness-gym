@@ -4,23 +4,27 @@ import "./Exercise.css";
 const Exercise = (props) => {
   const { img, name, description, time } = props.workout;
   return (
-    <div className="exercise">
-      <img className="img" src={img} alt="" />
-      <p className="exercise-name">{name}</p>
-      <div className="workout-info{">
-        <p>{description}</p>
-        <p>
+    <div className="col">
+      <div className="card h-100 border-danger rounded-4">
+        <img src={img} className="card-img-top img p-2 shadow-lg" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <span>{description}</span>
+        </div>
+        <p className="fs-3">
           <small>Time: {time}s</small>
         </p>
+        <div className="card-footer ">
+          <button
+            className="btn btn-primary w-100 shadow-lg"
+            onClick={() => {
+              props.handleAddToList(time);
+            }}
+          >
+            <>Add To List</>
+          </button>
+        </div>
       </div>
-      <button
-        className="btn-list"
-        onClick={() => {
-          props.handleAddToList(time);
-        }}
-      >
-        <p>Add To List</p>
-      </button>
     </div>
   );
 };

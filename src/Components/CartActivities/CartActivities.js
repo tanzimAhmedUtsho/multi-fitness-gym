@@ -12,10 +12,12 @@ const CartActivities = ({ totalTime }) => {
   };
   return (
     <div className="cart">
-      <div>
-        <img className="images" src={Img} alt="" />
-        <h3>Tanzim Ahmed Utsho</h3>
-        <h4>Dhaka,Bangladesh</h4>
+      <div className="row row-cols-2 mb-3 align-items-center">
+        <img className="profileImages rounded-circle" src={Img} alt="" />
+        <div>
+          <div>Tanzim Ahmed Utsho</div>
+          <div>Dhaka,Bangladesh</div>
+        </div>
       </div>
       <div className="person-details">
         <p>Weight:75kg</p>
@@ -24,7 +26,7 @@ const CartActivities = ({ totalTime }) => {
       </div>
 
       <p>Add A break</p>
-      <div className="time-break">
+      <div className="time-break d-flex flex-wrap">
         <button className="button" onClick={() => handleAddBreakTime(5)}>
           5s
         </button>

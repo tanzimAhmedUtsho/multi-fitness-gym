@@ -3,6 +3,7 @@ import "./Activities.css";
 
 import Exercise from "../Exercise/Exercise.js";
 import CartActivities from "../CartActivities/CartActivities";
+import Questions from "../Questions/Questions";
 
 const Activities = () => {
   const prevTime = parseInt(localStorage.getItem("totalTime"));
@@ -20,10 +21,10 @@ const Activities = () => {
     setTotalTime(totalTime + time);
   };
   return (
-    <div className="activities-container">
-      <div>
+    <div className="row container mx-auto">
+      <div className="col col-md-8 col-sm-6">
         <h2>Select You Activities</h2>
-        <div className="workout">
+        <div className="row row-cols-1 row-cols-md-3 g-4">
           {workouts.map((workout) => (
             <Exercise
               key={workout.id}
@@ -32,8 +33,9 @@ const Activities = () => {
             ></Exercise>
           ))}
         </div>
+        <Questions />
       </div>
-      <div className="calculation-activities-container">
+      <div className="col col-md-4 col-sm-6">
         <CartActivities totalTime={totalTime}></CartActivities>
       </div>
     </div>
