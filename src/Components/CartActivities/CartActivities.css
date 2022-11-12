@@ -1,0 +1,20 @@
+.cart {
+  position: sticky;
+  top: 0;
+  padding: 20px;
+}
+.person-details {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  font-weight: bold;
+  display: flex;
+}
+.time-break {
+  background-color: antiquewhite;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  border-radius: 10px;
+}
