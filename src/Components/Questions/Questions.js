@@ -13,7 +13,7 @@ const Questions = () => {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Accordion Item #1
+            How does react work?
           </button>
         </h2>
         <div
@@ -23,14 +23,11 @@ const Questions = () => {
           data-bs-parent="#accordionExample"
         >
           <div className="accordion-body">
-            <strong>This is the first item's accordion body.</strong> It is
-            shown by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+            ReactJS divides the UI into isolated reusable pieces of code known
+            as components. React components work similarly to JavaScript
+            functions as they accept arbitrary inputs called properties or
+            props. It's possible to have as many components as necessary without
+            cluttering your code.
           </div>
         </div>
       </div>
@@ -44,7 +41,7 @@ const Questions = () => {
             aria-expanded="false"
             aria-controls="collapseTwo"
           >
-            Accordion Item #2
+            Difference between props and state
           </button>
         </h2>
         <div
@@ -54,14 +51,15 @@ const Questions = () => {
           data-bs-parent="#accordionExample"
         >
           <div className="accordion-body">
-            <strong>This is the second item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+            Props are passed via component properties, they're not reactive.
+            State are variables that react will react , updating the UI when
+            values changes. I think what is meant by "props should not be
+            changed" is that they should not be changed by children
+            components.While both hold information that influences the output of
+            render, they are different in one important way: props get passed to
+            the component (similar to function parameters) whereas state is
+            managed within the component (similar to variables declared within a
+            function).
           </div>
         </div>
       </div>
@@ -75,7 +73,7 @@ const Questions = () => {
             aria-expanded="false"
             aria-controls="collapseThree"
           >
-            Accordion Item #3
+            What is the use of useEffect in React?
           </button>
         </h2>
         <div
@@ -85,14 +83,14 @@ const Questions = () => {
           data-bs-parent="#accordionExample"
         >
           <div className="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+            The useEffect Hook allows you to perform side effects in your
+            components. Some examples of side effects are: fetching data,
+            directly updating the DOM, and timers. useEffect accepts two
+            arguments. The second argument is optional.The motivation behind the
+            introduction of useEffect Hook is to eliminate the side-effects of
+            using class-based components. For example, tasks like updating the
+            DOM, fetching data from API end-points, setting up subscriptions or
+            timers, etc can be lead to unwarranted side-effects.
           </div>
         </div>
       </div>
