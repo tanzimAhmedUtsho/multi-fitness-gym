@@ -41,14 +41,15 @@ const CartActivities = ({ totalTime }) => {
           45s
         </button>
       </div>
-      <p>Total Time</p>
-      <div className="time-break">
-        <p>{totalTime} Second</p>
+      <div className="totalAndBreak">
+        <div>Total Time</div>
+        <div>{totalTime} Second</div>
       </div>
-      <p>Break Time</p>
-      <div className="time-break">
-        <p>{breakTime} Second</p>
+      <div className="totalAndBreak">
+        <div>Break Time</div>
+        <div>{breakTime} Second</div>
       </div>
+      <button className="activityButton">Add Activity</button>
     </div>
   );
 };

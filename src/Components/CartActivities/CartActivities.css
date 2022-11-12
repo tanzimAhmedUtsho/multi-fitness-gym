@@ -18,3 +18,23 @@
   gap: 30px;
   border-radius: 10px;
 }
+.button {
+  padding: 5px;
+  border-radius: 50%;
+}
+.totalAndBreak {
+  background-color: antiquewhite;
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.activityButton {
+  background-color: blueviolet;
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
