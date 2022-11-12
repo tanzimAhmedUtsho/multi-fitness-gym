@@ -1,0 +1,10 @@
+.header {
+  height: 70px;
+  display: flex;
+  padding: 30px;
+  gap: 20px;
+}
+.header h3 {
+  color: rgba(245, 210, 55, 0.925);
+  font-size: 25px;
+}
