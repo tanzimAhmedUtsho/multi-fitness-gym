@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Img from "../../images/pp=01.png";
 import "./CartActivities.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CartActivities = ({ totalTime }) => {
   const [breakTime, setBreakTime] = useState(
@@ -10,6 +12,14 @@ const CartActivities = ({ totalTime }) => {
     localStorage.setItem("breakTime", time);
     setBreakTime(time);
   };
+  const showToast = () =>
+    toast.success(
+      <div>
+        <h6>Congratulations Tanzim!!!!!!!!</h6>
+        <p>Your exercise time {totalTime} second</p>
+        <p>You break time {breakTime} second</p>
+      </div>
+    );
   return (
     <div className="cart">
       <div className="row row-cols-2 mb-3 align-items-center">
@@ -51,7 +61,16 @@ const CartActivities = ({ totalTime }) => {
         <div>Break Time</div>
         <div>{breakTime} Second</div>
       </div>
-      <button className="activityButton">Add Activity</button>
+      <button className="activityButton" onClick={showToast}>
+        Add Activity
+      </button>
+      <ToastContainer
+        position="bottom-right"
+        closeOnClick
+        pauseOnHover
+        newestOnTop={false}
+        theme="colored"
+      />
     </div>
   );
 };
