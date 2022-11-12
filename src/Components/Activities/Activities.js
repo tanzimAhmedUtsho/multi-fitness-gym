@@ -1,6 +1,6 @@
 import React from "react";
 import "./Activities.css";
-import Img from "../../images/pp=01.jpg";
+import Img from "../../images/pp=01.png";
 
 const Activities = () => {
   return (
@@ -9,7 +9,7 @@ const Activities = () => {
         <h2>Select You Activities</h2>
       </div>
       <div>
-        <img src={Img} alt="" />
+        <img className="images" src={Img} alt="" />
         <h3>Tanzim Ahmed Utsho</h3>
         <h4>Dhaka,Bangladesh</h4>
       </div>
