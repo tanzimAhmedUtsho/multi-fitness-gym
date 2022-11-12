@@ -13,7 +13,12 @@ const Exercise = (props) => {
           <small>Time: {time}s</small>
         </p>
       </div>
-      <button className="btn-list">
+      <button
+        className="btn-list"
+        onClick={() => {
+          props.handleAddToList(time);
+        }}
+      >
         <p>Add To List</p>
       </button>
     </div>

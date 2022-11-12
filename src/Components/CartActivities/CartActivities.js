@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Img from "../../images/pp=01.png";
 import "./CartActivities.css";
 
-const CartActivities = () => {
+const CartActivities = ({ totalTime }) => {
+  const [breakTime, setBreakTime] = useState(
+    localStorage.getItem("breakTime") || 0
+  );
+  const handleAddBreakTime = (time) => {
+    localStorage.setItem("breakTime", time);
+    setBreakTime(time);
+  };
   return (
     <div className="cart">
       <div>
@@ -18,11 +25,29 @@ const CartActivities = () => {
 
       <p>Add A break</p>
       <div className="time-break">
-        <p>5s</p>
-        <p>15s</p>
-        <p>25s</p>
-        <p>35s</p>
-        <p>45s</p>
+        <button className="button" onClick={() => handleAddBreakTime(5)}>
+          5s
+        </button>
+        <button className="button" onClick={() => handleAddBreakTime(15)}>
+          15s
+        </button>
+        <button className="button" onClick={() => handleAddBreakTime(25)}>
+          25s
+        </button>
+        <button className="button" onClick={() => handleAddBreakTime(35)}>
+          35s
+        </button>
+        <button className="button" onClick={() => handleAddBreakTime(45)}>
+          45s
+        </button>
+      </div>
+      <p>Total Time</p>
+      <div className="time-break">
+        <p>{totalTime} Second</p>
+      </div>
+      <p>Break Time</p>
+      <div className="time-break">
+        <p>{breakTime} Second</p>
       </div>
     </div>
   );
