@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Activities.css";
-import Img from "../../images/pp=01.png";
+
 import Exercise from "../Exercise/Exercise.js";
+import CartActivities from "../CartActivities/CartActivities";
 
 const Activities = () => {
   const [workouts, setWorkouts] = useState([]);
@@ -21,10 +22,8 @@ const Activities = () => {
           ))}
         </div>
       </div>
-      <div>
-        <img className="images" src={Img} alt="" />
-        <h3>Tanzim Ahmed Utsho</h3>
-        <h4>Dhaka,Bangladesh</h4>
+      <div className="calculation-activities-container">
+        <CartActivities></CartActivities>
       </div>
     </div>
   );
