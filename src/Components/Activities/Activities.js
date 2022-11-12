@@ -15,9 +15,11 @@ const Activities = () => {
     <div className="activities-container">
       <div>
         <h2>Select You Activities</h2>
-        {workouts.map((workout) => (
-          <Exercise key={workout.id}></Exercise>
-        ))}
+        <div className="workout">
+          {workouts.map((workout) => (
+            <Exercise key={workout.id} workout={workout}></Exercise>
+          ))}
+        </div>
       </div>
       <div>
         <img className="images" src={Img} alt="" />

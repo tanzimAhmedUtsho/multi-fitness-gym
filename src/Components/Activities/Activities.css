@@ -2,6 +2,11 @@
   display: grid;
   grid-template-columns: 4fr 1fr;
 }
+.workout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
 
 .images {
   height: 80px;

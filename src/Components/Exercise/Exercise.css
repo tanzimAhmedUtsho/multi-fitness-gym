@@ -1,0 +1,27 @@
+.exercise {
+  width: 300;
+  height: 510px;
+  border: 1px solid yellowgreen;
+  border-radius: 8px;
+  padding: 7px;
+}
+.img {
+  width: 280px;
+  height: 280px;
+}
+
+.exercise-name {
+  font-weight: bold;
+}
+
+.workout-info {
+}
+.btn-list {
+  width: 100%;
+  background-color: rgb(163, 163, 50);
+  border: none;
+  border-radius: 0px 0px 8px 8px;
+}
+.btn-list:hover {
+  background-color: rgb(221, 221, 20);
+}
